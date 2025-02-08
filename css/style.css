@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     transition: background-color 0.5s, color 0.5s;
+    scroll-behavior: smooth;
 }
 
 /* Scrollbar untuk browser Webkit (Chrome, Safari) */
@@ -107,7 +108,11 @@ nav a {
     padding: 20px;
     border-radius: 10px;
     text-align: left;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, opacity 1s ease-in-out; /* Transisi dengan animasi fade-in */
+    opacity: 0; /* Awalnya tersembunyi */
+}
+.section.fade-in {
+    opacity: 1; /* Menampilkan elemen setelah animasi */
 }
 .section h2 {
     margin-top: 0;
@@ -118,21 +123,28 @@ nav a {
     overflow-x: auto;
     gap: 20px;
     scroll-snap-type: x mandatory; /* Mengaktifkan scroll snapping */
+    scroll-behavior: smooth; /* Menambahkan scroll behavior smooth */
 }
 .playlists iframe, .artists iframe, .top iframe, .favorite-songs iframe {
     flex: 0 0 auto;
     border: none;
     border-radius: 10px;
-    height: 500px; /* Meningkatkan nilai tinggi untuk iframe */
+    height: 475px;
+    width: 300px;
+    scroll-snap-align: center; /* Snap ke tengah */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transform dan box-shadow */
 }
 .playlists iframe {
-    width: 90%; /* Gunakan 90% lebar kontainer */
-    max-width: 2000px; /* Tentukan lebar maksimum */
-    scroll-snap-align: center; /* Snap ke tengah */
-    height: 700px;
+    height: 725px; /* Sesuaikan nilai tinggi untuk iframe playlist */
+    max-width: 90%;
+    width: 2000px;
 }
 .favorite-songs iframe {
-    height: 400px; /* Sesuaikan nilai tinggi untuk iframe lagu favorit */
+    height: 352px; /* Sesuaikan nilai tinggi untuk iframe lagu favorit */
+}
+.playlists iframe:hover, .artists iframe:hover, .top iframe:hover, .favorite-songs iframe:hover {
+    transform: scale(1.05); /* Menambahkan efek pembesaran saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan saat hover */
 }
 footer {
     background-color: #181818;
