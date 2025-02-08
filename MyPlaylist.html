@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist ZLF</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Playlist ZLF</h1>
+        <button id="theme-switcher" onclick="toggleTheme()">Ganti Tema</button>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#favorite-songs">Lagu Favorit</a>
+        <a href="#top">Top</a>
+        <a href="#playlists">Playlist</a>
+        <a href="#artists">Artist</a>
+    </nav>
+    <div class="container">
+        <div class="section favorite-songs" id="favorite-songs">
+            <h2>My Favorite Songs</h2>
+            <iframe src="https://open.spotify.com/embed/track/4gcQ4sBOIX8s510XrNZQUA?utm_source=generator" width="300" height="400" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="section top" id="top">
+            <h2>Top</h2>
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbNG2KDcFcKOF?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="section playlists" id="playlists">
+            <h2>My Playlist</h2>
+            <iframe src="https://open.spotify.com/embed/playlist/7stJJVvNTQ7o9fZOoqKW24?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="section artists" id="artists">
+            <h2>My Artist</h2>
+            <iframe src="https://open.spotify.com/embed/artist/6PUZZX4GCzeFS0GaDWxVwz?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Playlist ZLF. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

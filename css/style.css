@@ -1,0 +1,176 @@
+/* Gaya dan animasi untuk halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Scrollbar untuk browser Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1DB954;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #14833b;
+}
+
+/* Scrollbar untuk Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #1DB954 #333;
+}
+
+/* Gaya lainnya */
+header {
+    position: relative;
+    background-color: #1DB954;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Align title and button */
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-family: 'Helvetica', sans-serif; /* Use a clean, modern font like Spotify */
+    color: #fff;
+    flex-grow: 1; /* Make the title take available space */
+    text-align: left; /* Align text to the left */
+}
+#theme-switcher {
+    padding: 10px 20px;
+    background-color: #000; /* Default black color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 20px; /* Rounded corners for a sleek look */
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1em; /* Adjust font size */
+    transition: background-color 0.3s, color 0.3s;
+    outline: none; /* Remove outline on focus */
+}
+#theme-switcher:active {
+    background-color: #fff; /* White color when pressed */
+    color: #000; /* Black text color when pressed */
+}
+#theme-switcher:hover {
+    background-color: #333; /* Darker gray when hovered */
+}
+.light-mode #theme-switcher {
+    background-color: #fff; /* White background for light mode */
+    color: #000; /* Black text color for light mode */
+}
+.light-mode #theme-switcher:active {
+    background-color: #000; /* Black color when pressed in light mode */
+    color: #fff; /* White text color when pressed in light mode */
+}
+.light-mode #theme-switcher:hover {
+    background-color: #ddd; /* Lighter gray when hovered in light mode */
+}
+nav {
+    background-color: #181818;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    color: #1DB954;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: background-color 0.5s;
+}
+.section h2 {
+    margin-top: 0;
+    color: #1DB954;
+}
+.playlists, .artists, .top, .favorite-songs {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+}
+.playlists iframe, .artists iframe, .top iframe, .favorite-songs iframe {
+    flex: 0 0 auto;
+    border: none;
+    border-radius: 10px;
+    height: 500px; /* Increase the height value for the iframe */
+}
+.playlists iframe {
+    width: 90%; /* Use 90% of the container's width */
+    max-width: 900px; /* Set a maximum width */
+    scroll-snap-align: center; /* Snap to center */
+}
+.favorite-songs iframe {
+    height: 400px; /* Adjust the height value for the favorite songs iframe */
+}
+footer {
+    background-color: #181818;
+    padding: 10px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #14833b;
+}
+.light-mode {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+.light-mode .section {
+    background-color: #e0e0e0;
+}
+.light-mode .section ul li {
+    background-color: #ccc;
+}
+.light-mode nav, .light-mode footer {
+    background-color: #ddd;
+}
+.light-mode nav a {
+    color: #006400;
+}
+.light-mode button {
+    background-color: #006400;
+}
+.light-mode button:hover {
+    background-color: #1DB954;
+}

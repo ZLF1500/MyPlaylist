@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
+<body>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+
+        async function getAccessToken(code) {
+            const response = await fetch('https://accounts.spotify.com/api/token', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': 'Basic ' + btoa('9e6caf932a7f4418a28520e7950b4887:b3ff13689eb0452cbf000748874aaa88')
+                },
+                body: `grant_type=authorization_code&code=${code}&redirect_uri=https://localhost:5000/callback`
+            });
+            const data = await response.json();
+            localStorage.setItem('spotify_access_token', data.access_token);
+            window.location.href = 'index.html'; // Kembali ke halaman utama setelah mendapatkan akses token
+        }
+
+        if (code) {
+            getAccessToken(code);
+        }
+    </script>
+</body>
+</html>

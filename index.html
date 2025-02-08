@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Home</h1>
+        <button id="theme-switcher" onclick="toggleTheme()">Ganti Tema</button>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="MyPlaylist.html#favorite-songs">Lagu Favorit</a>
+        <a href="MyPlaylist.html#top">Top</a>
+        <a href="MyPlaylist.html#playlists">Playlist</a>
+        <a href="MyPlaylist.html#artists">Artist</a>
+    </nav>
+    <div class="container">
+        <div class="section" id="playlist">
+            <h2>My Playlist</h2>
+            <ul id="playlist-songs"></ul>
+        </div>
+        <div class="section">
+            <h2>Tambahkan Playlist atau Lagu</h2>
+            <form id="add-item-form">
+                <input type="text" id="item-id" placeholder="Masukkan Playlist ID atau Song ID" required>
+                <button type="submit">Tambahkan</button>
+            </form>
+        </div>
+        <div class="section" id="history">
+            <h2>Riwayat Pemutar</h2>
+            <ul id="history-list"></ul>
+        </div>
+        <div class="section">
+            <a href="https://accounts.spotify.com/authorize?client_id=9e6caf932a7f4418a28520e7950b4887&response_type=code&redirect_uri=https://localhost:5000/callback&scope=user-read-recently-played">Otorisasi Spotify</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Home. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
