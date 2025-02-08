@@ -127,8 +127,9 @@ nav a {
 }
 .playlists iframe {
     width: 90%; /* Use 90% of the container's width */
-    max-width: 900px; /* Set a maximum width */
+    max-width:2000px; /* Set a maximum width */
     scroll-snap-align: center; /* Snap to center */
+    height: 700px;
 }
 .favorite-songs iframe {
     height: 400px; /* Adjust the height value for the favorite songs iframe */
