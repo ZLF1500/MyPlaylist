@@ -17,7 +17,7 @@
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Authorization': 'Basic ' + btoa('9e6caf932a7f4418a28520e7950b4887:b3ff13689eb0452cbf000748874aaa88')
                 },
-                body: `grant_type=authorization_code&code=${code}&redirect_uri=https://localhost:5000/callback`
+                body: `grant_type=authorization_code&code=${code}&redirect_uri=https://myplaylistzlf.netlify.app`
             });
             const data = await response.json();
             localStorage.setItem('spotify_access_token', data.access_token);
