@@ -43,46 +43,46 @@ header {
     background-color: #1DB954;
     padding: 20px;
     display: flex;
-    justify-content: space-between; /* Align title and button */
+    justify-content: space-between; /* Menyelaraskan judul dan tombol */
     align-items: center;
 }
 header h1 {
     margin: 0;
     font-size: 1.8em;
-    font-family: 'Helvetica', sans-serif; /* Use a clean, modern font like Spotify */
+    font-family: 'Helvetica', sans-serif; /* Gunakan font modern seperti Spotify */
     color: #fff;
-    flex-grow: 1; /* Make the title take available space */
-    text-align: left; /* Align text to the left */
+    flex-grow: 1; /* Membuat judul mengambil ruang yang tersedia */
+    text-align: left; /* Menyelaraskan teks ke kiri */
 }
 #theme-switcher {
     padding: 10px 20px;
-    background-color: #000; /* Default black color */
-    color: #fff; /* White text color */
+    background-color: #000; /* Warna hitam default */
+    color: #fff; /* Warna teks putih */
     border: none;
-    border-radius: 20px; /* Rounded corners for a sleek look */
+    border-radius: 20px; /* Sudut melengkung untuk tampilan yang rapi */
     cursor: pointer;
     font-family: 'Helvetica', sans-serif;
-    font-size: 1em; /* Adjust font size */
+    font-size: 1em; /* Sesuaikan ukuran font */
     transition: background-color 0.3s, color 0.3s;
-    outline: none; /* Remove outline on focus */
+    outline: none; /* Hapus garis luar pada fokus */
 }
 #theme-switcher:active {
-    background-color: #fff; /* White color when pressed */
-    color: #000; /* Black text color when pressed */
+    background-color: #fff; /* Warna putih saat ditekan */
+    color: #000; /* Warna teks hitam saat ditekan */
 }
 #theme-switcher:hover {
-    background-color: #333; /* Darker gray when hovered */
+    background-color: #333; /* Abu-abu lebih gelap saat diarahkan */
 }
 .light-mode #theme-switcher {
-    background-color: #fff; /* White background for light mode */
-    color: #000; /* Black text color for light mode */
+    background-color: #fff; /* Latar belakang putih untuk mode terang */
+    color: #000; /* Warna teks hitam untuk mode terang */
 }
 .light-mode #theme-switcher:active {
-    background-color: #000; /* Black color when pressed in light mode */
-    color: #fff; /* White text color when pressed in light mode */
+    background-color: #000; /* Warna hitam saat ditekan dalam mode terang */
+    color: #fff; /* Warna teks putih saat ditekan dalam mode terang */
 }
 .light-mode #theme-switcher:hover {
-    background-color: #ddd; /* Lighter gray when hovered in light mode */
+    background-color: #ddd; /* Abu-abu lebih terang saat diarahkan dalam mode terang */
 }
 nav {
     background-color: #181818;
@@ -117,22 +117,22 @@ nav a {
     display: flex;
     overflow-x: auto;
     gap: 20px;
-    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    scroll-snap-type: x mandatory; /* Mengaktifkan scroll snapping */
 }
 .playlists iframe, .artists iframe, .top iframe, .favorite-songs iframe {
     flex: 0 0 auto;
     border: none;
     border-radius: 10px;
-    height: 500px; /* Increase the height value for the iframe */
+    height: 500px; /* Meningkatkan nilai tinggi untuk iframe */
 }
 .playlists iframe {
-    width: 90%; /* Use 90% of the container's width */
-    max-width:2000px; /* Set a maximum width */
-    scroll-snap-align: center; /* Snap to center */
+    width: 90%; /* Gunakan 90% lebar kontainer */
+    max-width: 2000px; /* Tentukan lebar maksimum */
+    scroll-snap-align: center; /* Snap ke tengah */
     height: 700px;
 }
 .favorite-songs iframe {
-    height: 400px; /* Adjust the height value for the favorite songs iframe */
+    height: 400px; /* Sesuaikan nilai tinggi untuk iframe lagu favorit */
 }
 footer {
     background-color: #181818;
