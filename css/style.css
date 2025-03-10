@@ -1,7 +1,8 @@
-/* Gaya dan animasi untuk halaman */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
+    background: linear-gradient(90deg, red, green, blue);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -13,78 +14,119 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Definisikan animasi gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    position: relative;
+    background-color: #333; /* Warna abu-abu untuk tema gelap */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-family: 'Helvetica', sans-serif;
+    color: #fff;
+    flex-grow: 1;
+    text-align: left;
+}
+#theme-switcher {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    outline: none;
+}
+#theme-switcher:active {
+    background-color: #fff;
+    color: #000;
+}
+#theme-switcher:hover {
+    background-color: #333;
+}
+.light-mode {
+    background: linear-gradient(90deg, red, green, blue);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #121212;
+}
+.light-mode header {
+    background-color: #d0d0d0; /* Mengurangi kecerahan warna putih pada header di light theme */
+}
+.light-mode header h1 {
+    color: #000; /* Warna font judul di light theme menjadi hitam */
+}
+.light-mode #theme-switcher {
+    background-color: #fff;
+    color: #000;
+}
+.light-mode #theme-switcher:active,
+.light-mode #theme-switcher:hover {
+    background: linear-gradient(90deg, red, green, blue);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+}
+
 /* Scrollbar untuk browser Webkit (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #333;
+    background: #333; /* Warna untuk tema gelap */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1DB954;
+    background: #1DB954; /* Warna untuk tema gelap */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #14833b;
+    background: #14833b; /* Warna untuk tema gelap */
 }
 
 /* Scrollbar untuk Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #1DB954 #333;
+    scrollbar-color: #1DB954 #333; /* Warna untuk tema gelap */
 }
 
-/* Gaya lainnya */
-header {
-    position: relative;
-    background-color: #1DB954;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* Menyelaraskan judul dan tombol */
-    align-items: center;
+.light-mode ::-webkit-scrollbar-track {
+    background: #ddd; /* Warna untuk tema terang */
 }
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-    font-family: 'Helvetica', sans-serif; /* Gunakan font modern seperti Spotify */
-    color: #fff;
-    flex-grow: 1; /* Membuat judul mengambil ruang yang tersedia */
-    text-align: left; /* Menyelaraskan teks ke kiri */
+
+.light-mode ::-webkit-scrollbar-thumb {
+    background: #006400; /* Warna untuk tema terang */
 }
-#theme-switcher {
-    padding: 10px 20px;
-    background-color: #000; /* Warna hitam default */
-    color: #fff; /* Warna teks putih */
-    border: none;
-    border-radius: 20px; /* Sudut melengkung untuk tampilan yang rapi */
-    cursor: pointer;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 1em; /* Sesuaikan ukuran font */
-    transition: background-color 0.3s, color 0.3s;
-    outline: none; /* Hapus garis luar pada fokus */
+
+.light-mode ::-webkit-scrollbar-thumb:hover {
+    background: #1DB954; /* Warna untuk tema terang */
 }
-#theme-switcher:active {
-    background-color: #fff; /* Warna putih saat ditekan */
-    color: #000; /* Warna teks hitam saat ditekan */
+
+.light-mode * {
+    scrollbar-color: #006400 #ddd; /* Warna untuk tema terang */
 }
-#theme-switcher:hover {
-    background-color: #333; /* Abu-abu lebih gelap saat diarahkan */
-}
-.light-mode #theme-switcher {
-    background-color: #fff; /* Latar belakang putih untuk mode terang */
-    color: #000; /* Warna teks hitam untuk mode terang */
-}
-.light-mode #theme-switcher:active {
-    background-color: #000; /* Warna hitam saat ditekan dalam mode terang */
-    color: #fff; /* Warna teks putih saat ditekan dalam mode terang */
-}
-.light-mode #theme-switcher:hover {
-    background-color: #ddd; /* Abu-abu lebih terang saat diarahkan dalam mode terang */
-}
+
 nav {
     background-color: #181818;
     padding: 10px;
@@ -102,6 +144,8 @@ nav a {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Menyelaraskan container ke tengah */
 }
 .section {
     background-color: #282828;
@@ -135,9 +179,13 @@ nav a {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transform dan box-shadow */
 }
 .playlists iframe {
-    height: 725px; /* Sesuaikan nilai tinggi untuk iframe playlist */
+    height: 700px; /* Sesuaikan nilai tinggi untuk iframe playlist */
     max-width: 90%;
-    width: 2000px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 1500px;
 }
 .favorite-songs iframe {
     height: 352px; /* Sesuaikan nilai tinggi untuk iframe lagu favorit */
