@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(90deg, red, green, blue);
+    background: linear-gradient(to right, red, blue, green);
     background-size: 600% 600%;
     animation: gradientAnimation 10s ease infinite;
     color: #fff;
@@ -60,10 +60,13 @@ header h1 {
     color: #000;
 }
 #theme-switcher:hover {
-    background-color: #333;
+    background: linear-gradient(to right, red, blue, green);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
 }
 .light-mode {
-    background: linear-gradient(90deg, red, green, blue);
+    background: linear-gradient(to right, red, blue, green);
     background-size: 600% 600%;
     animation: gradientAnimation 10s ease infinite;
     color: #121212;
@@ -80,7 +83,7 @@ header h1 {
 }
 .light-mode #theme-switcher:active,
 .light-mode #theme-switcher:hover {
-    background: linear-gradient(90deg, red, green, blue);
+    background: linear-gradient(to right, red, blue, green);
     background-size: 600% 600%;
     animation: gradientAnimation 10s ease infinite;
     color: #fff;
@@ -92,7 +95,7 @@ header h1 {
 }
 
 ::-webkit-scrollbar-track {
-    background: #333; /* Warna untuk tema gelap */
+    background: #282828; /* Warna untuk tema gelap */
     border-radius: 10px;
 }
 
@@ -108,7 +111,7 @@ header h1 {
 /* Scrollbar untuk Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #1DB954 #333; /* Warna untuk tema gelap */
+    scrollbar-color: #1DB954 #282828; /* Warna untuk tema gelap */
 }
 
 .light-mode ::-webkit-scrollbar-track {
