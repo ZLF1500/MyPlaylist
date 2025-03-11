@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -12,19 +13,19 @@
         <button id="theme-switcher" onclick="toggleTheme()">Ganti Tema</button>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="MyPlaylist.html">Favorite</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="MyPlaylist.html"><i class="fas fa-heart"></i> Favorite</a>
     </nav>
     <div class="container">
-        <div class="section">
+        <div class="section card">
             <h2>Ini Halaman Home</h2>
             <p>Selamat datang di halaman utama. Di sini Anda dapat mengakses berbagai fitur dan melihat playlist favorit ZLF.</p>
         </div>
-        <div class="section">
+        <div class="section card">
             <h2>Deskripsi Situs</h2>
             <p>Di situs ini, Anda bisa menjelajahi playlist favorit ZLF, menemukan lagu-lagu top, dan mengikuti artis kesayangan ZLF.</p>
         </div>
-        <div class="section">
+        <div class="section card">
             <h2>Berita Terbaru</h2>
             <p>Update terbaru V2: <br>
                 - Perbaikan container <br>
@@ -33,7 +34,7 @@
             </p>
             <p>Update terbaru V1: MyPlaylist ZLF telah hadir dan menjadi web pertama yang kubuat</p>
         </div>
-        <div class="section">
+        <div class="section card">
             <h2>Rekomendasi Musik</h2>
             <ul>
                 <li><a href="#">Rock untuk Semangat Pagi</a></li>
@@ -41,13 +42,18 @@
                 <li><a href="#">Pop Terbaru</a></li>
             </ul>
         </div>
-        <div class="section">
+        <div class="section card">
             <h2>Quotes ZLF</h2>
             <blockquote>"Nantikan saja"<br><br>~ZLF</blockquote>
         </div>
     </div>
     <footer>
         <p>&copy; 2025 MyPlaylist ZLF. All rights reserved.</p>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="MyPlaylist.html"><i class="fas fa-heart"></i> Favorite</a>
+        </nav>
+    </footer>
     </footer>
     <script src="js/script.js"></script>
 </body>

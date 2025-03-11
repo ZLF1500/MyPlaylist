@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, red, blue, green);
+    background-attachment: fixed;
     background-size: 600% 600%;
     animation: gradientAnimation 10s ease infinite;
     color: #fff;
@@ -27,6 +28,21 @@ body {
     }
 }
 
+/* Animasi fade-in untuk elemen yang muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Terapkan animasi fade-in pada elemen .section */
+.section {
+    animation: fadeIn 1s ease-in-out;
+}
+
 header {
     position: relative;
     background-color: #333; /* Warna abu-abu untuk tema gelap */
@@ -37,9 +53,10 @@ header {
 }
 header h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-size: 2.5em;
     font-family: 'Helvetica', sans-serif;
-    color: #fff;
+    font-weight: bold;
+    color: #1DB954;
     flex-grow: 1;
     text-align: left;
 }
@@ -55,6 +72,9 @@ header h1 {
     transition: background-color 0.3s, color 0.3s;
     outline: none;
 }
+#theme-switcher:focus {
+    outline: 2px solid #1DB954; /* Fokus yang jelas */
+}
 #theme-switcher:active {
     background-color: #fff;
     color: #000;
@@ -67,6 +87,7 @@ header h1 {
 }
 .light-mode {
     background: linear-gradient(to right, red, blue, green);
+    background-attachment: fixed;
     background-size: 600% 600%;
     animation: gradientAnimation 10s ease infinite;
     color: #121212;
@@ -80,6 +101,9 @@ header h1 {
 .light-mode #theme-switcher {
     background-color: #fff;
     color: #000;
+}
+.light-mode #theme-switcher:focus {
+    outline: 2px solid #006400; /* Fokus yang jelas untuk light mode */
 }
 .light-mode #theme-switcher:active,
 .light-mode #theme-switcher:hover {
@@ -140,6 +164,10 @@ nav a {
     color: #1DB954;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s; /* Transisi untuk perubahan warna */
+}
+nav a:focus {
+    outline: 2px solid #1DB954; /* Fokus yang jelas */
 }
 .container {
     flex: 1;
@@ -163,6 +191,8 @@ nav a {
 }
 .section h2 {
     margin-top: 0;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2em;
     color: #1DB954;
 }
 .playlists, .artists, .top, .favorite-songs {
@@ -178,17 +208,17 @@ nav a {
     border-radius: 10px;
     height: 475px;
     width: 300px;
+    margin-top: 3%;
+    margin-bottom: 3%;
     scroll-snap-align: center; /* Snap ke tengah */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transform dan box-shadow */
 }
 .playlists iframe {
     height: 700px; /* Sesuaikan nilai tinggi untuk iframe playlist */
     max-width: 90%;
+    width: 1500px;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    width: 1500px;
 }
 .favorite-songs iframe {
     height: 352px; /* Sesuaikan nilai tinggi untuk iframe lagu favorit */
@@ -212,6 +242,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+button:focus {
+    outline: 2px solid #14833b; /* Fokus yang jelas */
 }
 button:hover {
     background-color: #14833b;
@@ -237,4 +270,33 @@ button:hover {
 }
 .light-mode button:hover {
     background-color: #1DB954;
+}
+
+/* Gaya khusus untuk layar dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+    body {
+        background-size: 400% 400%;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .playlists iframe, .artists iframe, .top iframe, .favorite-songs iframe {
+        height: 250px; /* Menyesuaikan tinggi iframe untuk layar kecil */
+        width: 100%;
+        margin: 10px 0; /* Menambahkan margin vertikal */
+    }
+    .playlists iframe {
+        height: 300px; /* Menyesuaikan tinggi untuk iframe playlist */
+    }
 }

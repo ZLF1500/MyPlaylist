@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -12,13 +13,14 @@
         <button id="theme-switcher" onclick="toggleTheme()">Ganti Tema</button>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="MyPlaylist.html">Favorite</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="MyPlaylist.html"><i class="fas fa-heart"></i> Favorite</a>
     </nav>
     <div class="container">
-        <div class="section">
-            <div class="section favorite-songs" id="favorite-songs">
+        <div class="section card">
+            <div class="favorite-songs" id="favorite-songs">
                 <h2>My Favorite Songs</h2>
+                <!-- Embed your favorite songs -->
                 <iframe src="https://open.spotify.com/embed/track/4gcQ4sBOIX8s510XrNZQUA?utm_source=generator" width="300" height="400" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <iframe src="https://open.spotify.com/embed/track/2GO1pRF96wqjB5TKXLQ0vY?utm_source=generator" width="300" height="400" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <iframe src="https://open.spotify.com/embed/track/3M214U0mwSm041GsQR3nrO?utm_source=generator" width="300" height="400" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -29,48 +31,59 @@
                 <iframe src="https://open.spotify.com/embed/track/3oELxRDbAzyvOodhd5FQzB?utm_source=generator" width="300" height="400" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <iframe src="https://open.spotify.com/embed/track/7eJMfftS33KTjuF7lTsMCx?utm_source=generator" width="300" height="400" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <iframe src="https://open.spotify.com/embed/track/1DmW5Ep6ywYwxc2HMT5BG6?utm_source=generator" width="300" height="400" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <!-- Add other song iframes here -->
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="section">
-            <div class="section top" id="top">
+        <div class="section card">
+            <div class="top" id="top">
                 <h2>Top Songs</h2>
+                <!-- Embed top songs playlists -->
                 <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbNG2KDcFcKOF?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbIZK8aUquyx8?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbMDoHDwVN2tF?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbObFQZ3JLcXt?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLiRSasKsNU9?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbKpV6RVDTWcZ?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
+                <!-- Add other playlist iframes here -->
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="section">
+        <div class="section card">
             <h2>My Playlists</h2>
             <div class="playlists" id="playlists">
+                <!-- Embed your playlists -->
                 <iframe src="https://open.spotify.com/embed/playlist/7stJJVvNTQ7o9fZOoqKW24?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/6t2oWKbBxpvgQPtn1crSwU?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/2ULLEdMWHTYLEhNbaclKwS?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/24ktKe0KC6E4Xln5JShXtr?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/5YhjEIWz3B8QGIeJFrV9wN?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/playlist/5hOH3HcnQon0lWreL9Tfwx?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
+                <!-- Add other playlist iframes here -->
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="section">
-            <div class="section artists" id="artists">
+        <div class="section card">
+            <div class="artists" id="artists">
                 <h2>My Artists</h2>
+                <!-- Embed favorite artists -->
                 <iframe src="https://open.spotify.com/embed/artist/6PUZZX4GCzeFS0GaDWxVwz?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/artist/7vk5e3vY1uw9plTHJAMwjN?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/artist/3OKg7YbOIatODzkRIbLJR4?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
                 <iframe src="https://open.spotify.com/embed/artist/1Cd373x8qzC7SNUg5IToqp?utm_source=generator" width="300" height="500" allowtransparency="true" allow="encrypted-media"></iframe>
+                <!-- Add other artist iframes here -->
             </div>
         </div>
     </div>
     <footer>
         <p>&copy; 2025 MyPlaylist ZLF. All rights reserved.</p>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="MyPlaylist.html"><i class="fas fa-heart"></i> Favorite</a>
+        </nav>
     </footer>
     <script src="js/script.js"></script>
 </body>

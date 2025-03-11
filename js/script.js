@@ -24,8 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     smoothScrollContainers.forEach(container => {
         container.addEventListener('wheel', (event) => {
             event.preventDefault();
+            const delta = Math.sign(event.deltaY);
             container.scrollBy({
-                left: event.deltaY < 0 ? -300 : 300,
+                left: delta * 300,
                 behavior: 'smooth'
             });
         });
