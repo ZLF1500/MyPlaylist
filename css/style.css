@@ -283,6 +283,7 @@ button:hover {
         flex-direction: column;
         text-align: center;
     }
+
     nav {
         flex-direction: column;
     }
@@ -291,11 +292,21 @@ button:hover {
         padding: 10px;
     }
 
+    .section {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+
     .playlists iframe, .artists iframe, .top iframe, .favorite-songs iframe {
         height: 250px; /* Menyesuaikan tinggi iframe untuk layar kecil */
         width: 100%;
         margin: 10px 0; /* Menambahkan margin vertikal */
     }
+
     .playlists iframe {
         height: 300px; /* Menyesuaikan tinggi untuk iframe playlist */
     }
