@@ -93,10 +93,10 @@ header h1 {
     color: #121212;
 }
 .light-mode header {
-    background-color: #d0d0d0; /* Mengurangi kecerahan warna putih pada header di light theme */
+    background-color: #ccc; /* Mengurangi kecerahan warna putih pada header di light theme */
 }
 .light-mode header h1 {
-    color: #000; /* Warna font judul di light theme menjadi hitam */
+    color: #006400; /* Warna font judul di light theme menjadi hitam */
 }
 .light-mode #theme-switcher {
     background-color: #fff;
@@ -214,9 +214,9 @@ nav a:focus {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transform dan box-shadow */
 }
 .playlists iframe {
-    height: 700px; /* Sesuaikan nilai tinggi untuk iframe playlist */
+    height: 475px; /* Sesuaikan nilai tinggi untuk iframe playlist */
     max-width: 90%;
-    width: 1500px;
+    width: 2000px;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -255,6 +255,12 @@ button:hover {
 }
 .light-mode .section {
     background-color: #e0e0e0;
+}
+.light-mode .section h2 {
+    margin-top: 0;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2em;
+    color: #006400;
 }
 .light-mode .section ul li {
     background-color: #ccc;
