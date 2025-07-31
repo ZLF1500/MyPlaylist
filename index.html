@@ -6,62 +6,92 @@
     <title>Home</title>
     <link rel="icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1><img src="icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-            Selamat Datang di Home MyPlaylist</h1>
-        <button id="theme-switcher" onclick="toggleTheme()">Ganti Tema</button>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            <div>
+                 <h1>Selamat Datang di Home MyPlaylist</h1>
+            </div>
+        </div>
     </header>
-    <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="MyPlaylist.html"><i class="fas fa-heart"></i> Favorite</a>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="index.html"><i class="fa-solid fa-home"></i> Home</a>
+            <a href="MyPlaylist.html"><i class="fa-solid fa-heart"></i> Favorite</a>
+        </div>
     </nav>
     <div class="container">
-        <div class="section card">
-            <h2>Ini Halaman Home</h2>
-            <p>Selamat datang di halaman utama. Di sini Anda dapat mengakses berbagai fitur dan melihat playlist favorit ZLF.</p>
+        <div class="section card account-card">
+            <h2 class="account-title"><i class="fa-solid fa-home"></i> Ini Halaman Home</h2>
+            <div class="account-title-bar"></div>
+            <ul class="account-list">
+                <li>
+                    <p>Selamat datang di halaman utama. Di sini Anda dapat mengakses berbagai fitur dan melihat playlist favorit ZLF.</p>
+                </li>
+            </ul>
         </div>
-        <div class="section card">
-            <h2>Deskripsi Situs</h2>
-            <p>Di situs ini, Anda bisa menjelajahi playlist favorit ZLF, menemukan lagu-lagu top, dan mengikuti artis kesayangan ZLF.</p>
-            <p><font color="red"><b>HARAP BACA!</b></font><br><br>
-                Untuk menghilangkan "Preview" kamu harus login pada Spotify yang ada di browser mu <br><br>
-                <font color="red"><b>Tidak berhasil pada perangkat mobile!</b></font>
+        <div class="section card account-card">
+            <h2 class="account-title"><i class="fa-solid fa-info-circle"></i> Deskripsi Situs</h2>
+            <div class="account-title-bar"></div>
+            <ul class="account-list">
+                <li>
+                    <p>Di situs ini, Anda bisa menjelajahi playlist favorit ZLF, menemukan lagu-lagu top, dan mengikuti artis kesayangan ZLF.</p>
+                    <p><font color="red"><b>HARAP BACA!</b></font><br><br>
+                    Untuk menghilangkan "Preview" kamu harus login pada Spotify yang ada di browser mu <br><br>
+                    <font color="red"><b>Tidak berhasil pada perangkat mobile!</b></font>
             </p>
+                </li>
+            </ul>
         </div>
-        <div class="section card">
-            <h2>Berita Terbaru</h2>
-            <p>Update terbaru V2.1: Penambahan Icon Image</p>
-            <p>Update terbaru V2: <br>
-                - Perbaikan container <br>
-                - Update Background (RBG) <br>
-                - Penyesuian Header
-            </p>
-            <p>Update terbaru V1: MyPlaylist ZLF telah hadir dan menjadi web pertama yang kubuat</p>
+        <div class="section card account-card">
+            <h2 class="account-title"><i class="fa-solid fa-newspaper"></i> Berita Terbaru</h2>
+            <div class="account-title-bar"></div>
+            <ul class="account-list">
+                <li>
+                    <p>Update terbaru V3: Pembaruan Antarmuka Pengguna (UI)</p>
+                </li>
+                <li>
+                    <p>Update terbaru V2.1: Penambahan Icon Image</p>
+                </li>
+                <li>
+                    <p>Update terbaru V2: <br>
+                        - Perbaikan container <br>
+                        - Update Background (RBG) <br>
+                        - Penyesuian Header
+                    </p>
+                </li>
+                <li>
+                    <p>Update terbaru V1: MyPlaylist ZLF telah hadir dan menjadi web pertama yang kubuat</p>
+                </li>
+            </ul>
         </div>
-        <div class="section card">
-            <h2>Rekomendasi Musik</h2>
-            <ul>
+        <div class="section card account-card">
+            <h2 class="account-title"><i class="fa-solid fa-music"></i>Rekomendasi Musik</h2>
+            <div class="account-title-bar"></div>
+            <ul class="account-list">
                 <li><a href="#">Rock untuk Semangat Pagi</a></li>
                 <li><a href="#">Jazz untuk Malam Santai</a></li>
                 <li><a href="#">Pop Terbaru</a></li>
             </ul>
         </div>
-        <div class="section card">
-            <h2>Quotes ZLF</h2>
-            <blockquote>"Nantikan saja"<br><br>~ZLF</blockquote>
+        <div class="section card account-card">
+            <h2 class="account-title"><i class="fa-solid fa-quote-left"></i>Quotes ZLF<i class="fa-solid fa-quote-right"></i></h2>
+            <div class="account-title-bar"></div>
+            <ul class="account-list">
+                <li>
+                    <blockquote>"Nantikan saja"<br><br>~ZLF</blockquote>
+                </li>
+            </ul>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2025 MyPlaylist ZLF. All rights reserved.</p>
-        <nav>
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-            <a href="MyPlaylist.html"><i class="fas fa-heart"></i> Favorite</a>
-        </nav>
-    </footer>
-    </footer>
-    <script src="js/script.js"></script>
 </body>
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Biodata Diri ZLF. All rights reserved.</p>
+    </div>
+    <script src="js/script.js"></script>
+</footer>
 </html>
