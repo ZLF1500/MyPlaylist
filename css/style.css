@@ -183,15 +183,13 @@ header h1 {
     flex: 0 0 auto;
     border: none;
     border-radius: 10px;
-    height: 475px;
-    width: 300px;
     margin-top: 3%;
     margin-bottom: 3%;
     scroll-snap-align: center; /* Snap ke tengah */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transform dan box-shadow */
 }
 .playlists iframe {
-    height: 475px; /* Sesuaikan nilai tinggi untuk iframe playlist */
+    height: 470px; /* Sesuaikan nilai tinggi untuk iframe playlist */
     max-width: 90%;
     width: 2000px;
     margin-left: 5%;
@@ -199,6 +197,24 @@ header h1 {
 }
 .favorite-songs iframe {
     height: 352px; /* Sesuaikan nilai tinggi untuk iframe lagu favorit */
+    max-width: 90%;
+    width: 2000px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.artists iframe {
+    height: 152px; /* Sesuaikan nilai tinggi untuk iframe artis */
+    max-width: 90%;
+    width: 2000px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.top iframe {
+    height: 470px; /* Sesuaikan nilai tinggi untuk iframe top */
+    max-width: 90%;
+    width: 2000px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .playlists iframe:hover, .artists iframe:hover, .top iframe:hover, .favorite-songs iframe:hover {
     transform: scale(1.05); /* Menambahkan efek pembesaran saat hover */
@@ -367,183 +383,6 @@ audio {
   border-radius: 8px;
   background-color: #f9f9f9;
 }
-@media (max-width: 768px) {
-    .cv-container {
-        grid-template-columns: 1fr;
-    }
-    .sidebar {
-        padding: 20px;
-    }
-    .main-content {
-        padding: 20px;
-    }
-    .main-content h1 {
-        font-size: 1.8em;
-    }
-    .main-content .section h2 {
-        font-size: 1.3em;
-    }
-}
-@media (max-width: 480px) {
-    .sidebar img {
-        width: 120px;
-        height: 120px;
-    }
-    .sidebar h2 {
-        font-size: 1.5em;
-    }
-    .main-content h1 {
-        font-size: 1.6em;
-    }
-    .main-content p {
-        font-size: 0.95em;
-    }
-}
-
-/* Gayakhusus untuk layar dengan lebar maksimum 768px */
-@media (max-width: 768px) {
-    body {
-        background-size: 400% 400%;
-    }
-
-    header {
-        padding: 10px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .section {
-        padding: 15px;
-        margin: 10px 0;
-    }
-
-    .section h2 {
-        font-size: 1.5em;
-    }
-
-    .profile-img {
-        border: 5px solid #4CAF50; /* warna hijau, bisa kamu ganti sesuai selera */
-        border-radius: 10px;       /* sudut membulat, opsional */
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* efek bayangan */
-    }
-
-}
-@media (max-width: 600px) {
-    body {
-        padding: 0;
-        margin: 0;
-        background: #000;
-    }
-    .container {
-        padding: 0;
-        margin: 0;
-    }
-    .cv-container {
-        flex-direction: column;
-        min-height: unset;
-        padding: 0;
-        margin: 0;
-    }
-    .sidebar {
-        min-width: 100%;
-        border-radius: 0 0 16px 16px;
-        padding: 18px 8px;
-        min-height: unset;
-        box-shadow: none;
-    }
-    .sidebar img {
-        width: 110px;
-        height: 110px;
-        margin-bottom: 12px;
-    }
-    .sidebar h2 {
-        font-size: 1.3em;
-        margin: 12px 0;
-    }
-    .sidebar p {
-        font-size: 1em;
-    }
-    .contact-info p {
-        font-size: 0.98em;
-        margin: 6px 0;
-        word-break: break-all;
-    }
-    .main-content {
-        padding: 0 4px;
-    }
-    .section.card {
-        padding: 12px 6px;
-        border-radius: 10px;
-        margin: 12px 0;
-    }
-    .card-title,
-    .account-title {
-        font-size: 1.1em;
-        padding-left: 2px;
-    }
-    .card-title-bar,
-    .account-title-bar {
-        height: 2px;
-        margin: 6px 0 12px 0;
-    }
-    .biodata-list li,
-    .account-list li {
-        font-size: 0.98em;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
-        padding: 8px 8px;
-        margin-bottom: 8px;
-    }
-    .biodata-label,
-    .account-label {
-        min-width: unset;
-        font-size: 1em;
-    }
-    .address-card {
-        padding: 8px 8px;
-        margin-bottom: 8px;
-    }
-    .address-title {
-        font-size: 1em;
-        margin-bottom: 4px;
-    }
-    .address-value {
-        font-size: 0.98em;
-    }
-    .account-btn {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 6px;
-        font-size: 1em;
-        padding: 8px 0;
-    }
-    .main-footer {
-        padding: 14px 0 8px 0;
-        border-radius: 0;
-        font-size: 0.98em;
-    }
-    .footer-social a {
-        font-size: 1.2em;
-        margin: 0 6px;
-    }
-}
-
-/* Sembunyikan header di tampilan Mobile */
-@media (max-width: 600px) {
-    .main-header {
-        display: none;
-    }
-}
-
 a,
 a:visited,
 a:active {
@@ -616,19 +455,6 @@ nav a {
 nav a:focus {
     outline: 2px solid #00ffcc; /* Fokus yang jelas */
 }
-@media (max-width: 600px) {
-    .header-content {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .header-title {
-        font-size: 1.4em;
-    }
-    .header-img {
-        width: 56px;
-        height: 56px;
-    }
-}
 
 /* Tambahkan di css/style.css */
 .main-footer {
@@ -663,15 +489,6 @@ nav a:focus {
 }
 .footer-social a:hover {
     color: #fff;
-}
-@media (max-width: 600px) {
-    .main-footer {
-        padding: 16px 0 8px 0;
-        border-radius: 0;
-    }
-    .footer-social a {
-        font-size: 1.2em;
-    }
 }
 
 /* Tambahkan di css/style.css */
@@ -867,23 +684,4 @@ nav a:focus {
     color: #fff;
     font-size: 1em;
     margin: 0;
-}
-
-@media (max-width: 600px) {
-    .biodata-card {
-        padding: 14px 8px;
-        border-radius: 10px;
-    }
-    .card-title {
-        font-size: 1.1em;
-    }
-    .biodata-list li {
-        font-size: 0.95em;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
-    .address-card {
-        padding: 8px 8px;
-    }
 }
